@@ -12,11 +12,11 @@ let gameData = {
 
 // Function to update the resources display
 function updateDisplay() {
-    document.getElementById('resource-bones').innerText = gameData.resources["bones"];
-    document.getElementById('resource-fish').innerText = gameData.resources["fish"];
-    document.getElementById('resource-gold').innerText = gameData.resources["gold"];
-    document.getElementById('resource-simp').innerText = gameData.resources["simps"];
-    document.getElementById('resource-pelt').innerText = gameData.resources["pelts"];
+    document.getElementById('resource-bones').innerText = gameData.resources["bones"] ?? 0;
+    document.getElementById('resource-fish').innerText = gameData.resources["fish"] ?? 0;
+    document.getElementById('resource-gold').innerText = gameData.resources["gold"] ?? 0;
+    document.getElementById('resource-simp').innerText = gameData.resources["simps"] ?? 0;
+    document.getElementById('resource-pelt').innerText = gameData.resources["pelts"] ?? 0;
     
 }
 
