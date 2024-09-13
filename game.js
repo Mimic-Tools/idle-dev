@@ -28,6 +28,7 @@ function saveGame() {
 
 function clearSave() {
     localStorage.removeItem('idleGameSave');
+    gameData = {}
     console.log("Game save cleared from localStorage.");
 }
 
