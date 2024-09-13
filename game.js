@@ -1,6 +1,8 @@
 // Idle Game Logic
 let gameData = {
-    resources: 0,
+    resources: {
+        "bones": 0,
+    },
     resourcePerClick: 1
 };
 
@@ -56,17 +58,10 @@ function uploadSave(event) {
     }
 }
 
-// On button click, increase resources
-document.getElementById('click-button').addEventListener('click', () => {
-    gameData.resources += gameData.resourcePerClick;
+function getResource(resource_type){
+    gameData.resources[resource_type] += gameData.resourcePerClick;
     updateDisplay();
-});
-
-// // Save button
-// document.getElementById('save-button').addEventListener('click', saveGame);
-
-// // Load button
-// document.getElementById('load-button').addEventListener('click', loadGame);
+}
 
 // Download save button
 document.getElementById('download-save').addEventListener('click', downloadSave);
