@@ -77,8 +77,8 @@ document.getElementById('upload-save').addEventListener('click', uploadSave);
 // Load game data on page refresh
 window.onload = loadGame;
 
-// Automatically save game every 10 seconds
-setInterval(saveGame, 10000);
+// Automatically save game every second
+setInterval(saveGame, 1000);
 
 // Initial display update
 updateDisplay();
