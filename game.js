@@ -2,6 +2,10 @@
 let gameData = {
     resources: {
         "bones": 0,
+        "fish": 0,
+        "gold": 0,
+        "simps": 0,
+        "pelts": 0,
     },
     resourcePerClick: 1
 };
@@ -68,11 +72,8 @@ function getResource(resource_type){
     updateDisplay();
 }
 
-// Download save button
 document.getElementById('download-save').addEventListener('click', downloadSave);
-// Upload save button
 document.getElementById('upload-save').addEventListener('click', uploadSave);
-
 
 // Load game data on page refresh
 window.onload = loadGame;
