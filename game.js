@@ -75,7 +75,8 @@ function uploadSave(event) {
 }
 
 function getResource(resource_type){
-    gameData.resources[resource_type] += gameData.resourcePerClick;
+    prevValue = gameData.resources[resource_type] ?? 0;
+    gameData.resources[resource_type] = prevValue + gameData.resourcePerClick;
     updateDisplay();
 }
 
