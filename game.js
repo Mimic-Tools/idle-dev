@@ -37,6 +37,24 @@ function downloadSave() {
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
 }
+function uploadSave(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const uploadedData = JSON.parse(e.target.result);
+                gameData = uploadedData;
+                saveGame();  // Save the uploaded data to localStorage
+                updateDisplay();
+                console.log("Game save uploaded and loaded!");
+            } catch (err) {
+                console.error("Invalid file format!", err);
+            }
+        };
+        reader.readAsText(file);
+    }
+}
 
 // On button click, increase resources
 document.getElementById('click-button').addEventListener('click', () => {
@@ -44,14 +62,23 @@ document.getElementById('click-button').addEventListener('click', () => {
     updateDisplay();
 });
 
-// Save button
-document.getElementById('save-button').addEventListener('click', saveGame);
+// // Save button
+// document.getElementById('save-button').addEventListener('click', saveGame);
 
-// Load button
-document.getElementById('load-button').addEventListener('click', loadGame);
+// // Load button
+// document.getElementById('load-button').addEventListener('click', loadGame);
 
 // Download save button
 document.getElementById('download-save').addEventListener('click', downloadSave);
+// Upload save button
+document.getElementById('upload-save').addEventListener('click', uploadSave);
+
+
+// Load game data on page refresh
+window.onload = loadGame;
+
+// Automatically save game every 10 seconds
+setInterval(saveGame, 10000);
 
 // Initial display update
 updateDisplay();
