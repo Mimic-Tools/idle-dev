@@ -8,7 +8,12 @@ let gameData = {
 
 // Function to update the resources display
 function updateDisplay() {
-    document.getElementById('resources').innerText = gameData.resources;
+    document.getElementById('resource-bones').innerText = gameData.resources["bones"];
+    document.getElementById('resource-fish').innerText = gameData.resources["fish"];
+    document.getElementById('resource-gold').innerText = gameData.resources["gold"];
+    document.getElementById('resource-simp').innerText = gameData.resources["simps"];
+    document.getElementById('resource-pelt').innerText = gameData.resources["pelts"];
+    
 }
 
 // Function to save game data to localStorage
