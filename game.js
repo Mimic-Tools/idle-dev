@@ -30,6 +30,7 @@ function clearSave() {
     localStorage.removeItem('idleGameSave');
     gameData = {}
     console.log("Game save cleared from localStorage.");
+    updateDisplay();
 }
 
 // Function to load game data from localStorage
