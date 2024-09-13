@@ -26,6 +26,11 @@ function saveGame() {
     console.log("Game saved!");
 }
 
+function clearSave() {
+    localStorage.removeItem('idleGameSave');
+    console.log("Game save cleared from localStorage.");
+}
+
 // Function to load game data from localStorage
 function loadGame() {
     const savedData = localStorage.getItem('idleGameSave');
@@ -74,6 +79,7 @@ function getResource(resource_type){
 
 document.getElementById('download-save').addEventListener('click', downloadSave);
 document.getElementById('upload-save').addEventListener('click', uploadSave);
+document.getElementById('clear-save').addEventListener('click', clearSave);
 
 // Load game data on page refresh
 window.onload = loadGame;
