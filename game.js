@@ -1,13 +1,6 @@
 // Idle Game Logic
 let gameData = {
-    resources: {
-        "bones": 0,
-        "fish": 0,
-        "gold": 0,
-        "simps": 0,
-        "pelts": 0,
-    },
-    resourcePerClick: 1
+    resources: {}
 };
 
 // Function to update the resources display
@@ -28,7 +21,9 @@ function saveGame() {
 
 function clearSave() {
     localStorage.removeItem('idleGameSave');
-    gameData = {}
+    gameData = {
+        resources:{}
+    }
     console.log("Game save cleared from localStorage.");
     updateDisplay();
 }
