@@ -15,15 +15,20 @@
 
     <ul class="nav nav-tabs">
      <li class="nav-item">
-       <a class="nav-link active" aria-current="page" href="#">World</a>
+       <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#world" type="button" role="tab" aria-controls="profile" aria-selected="false">World</button>
      </li>
-    <li class="nav-item">
-    <a class="nav-link" href="#">Settings</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Upgrades</a>
-  </li>
+     <li class="nav-item">
+       <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+     </li>
+     <li class="nav-item">
+       <button class="nav-link" disabled id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+     </li>
     </ul>
+    <div class="tab-content" id="myTabContent">
+     <div class="tab-pane fade show active" id="world" role="tabpanel" aria-labelledby="home-tab">..a.</div>
+     <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="profile-tab">.b..</div>
+     <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="contact-tab">..c.</div>
+    </div>
 
     <div class="container text-center">
       <div class="row">
