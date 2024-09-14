@@ -11,6 +11,34 @@ function updateDisplay() {
 }
 
 
+function renderQuests() {
+    questlines = window.quest_data
+
+    const container = document.getElementById('quest-container');
+    container.innerHTML = ''; // Clear container before rendering
+
+    questlines.forEach(questLine => {
+        const questLineDiv = document.createElement('div');
+        questLineDiv.innerHTML = `<h4>${questLine.title}</h4><hr />`;
+
+        questLine["items"].forEach(quest => {
+            const questDiv = document.createElement('div');
+            if (quest.complete == false || 0){
+                questDiv.className = `quest alert alert-success`;
+            }else{
+                questDiv.className = `quest alert alert-warning`;
+            }
+            questDiv.innerHTML = `<strong>${quest.title}</strong><br/>`
+            Object.entries(quest.criteria).forEach(([what, amount]) => {
+                questDiv.innerHTML += `${what}: ${amount}`
+            });
+            questLineDiv.appendChild(questDiv);
+        });
+        container.appendChild(questLineDiv);
+    });
+}
+
+
 // Fetch quests from the JSON file
 fetch('data/quests.json')
     .then(response => response.json())
