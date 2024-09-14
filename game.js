@@ -74,15 +74,17 @@ function getResource(resource_type){
     gameData.resources[resource_type] = prevValue + 1;
     updateDisplay();
 }
-function renderQuests(quests) {
+function renderQuests(questlines) {
     const container = document.getElementById('quest-container');
     container.innerHTML = ''; // Clear container before rendering
 
-    quests.forEach(quest => {
-        const questDiv = document.createElement('div');
-        questDiv.className = `quest alert alert-warning`;
-        questDiv.innerHTML = `<strong>${quest.title}</strong><br/>${quest.description}`;
-        container.appendChild(questDiv);
+    questlines.forEach(questLine => {
+        questLine.forEach(quest => {
+           const questDiv = document.createElement('div');
+           questDiv.className = `quest alert alert-warning`;
+           questDiv.innerHTML = `<strong>${quest.title}</strong><br/>${quest.requirements}`;
+           container.appendChild(questDiv);
+        });
     });
 }
 
