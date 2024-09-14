@@ -47,6 +47,17 @@
                 "criteria": {
                     "bones": 700
                 }
+            }
+        ]
+    },
+    {
+        "title": "Mephit to the madness!"
+        "items": [
+            {
+                "title": "Crystal Mephit",
+                "criteria": {
+                    "bones": 10
+                }
             },
         ]
     }
