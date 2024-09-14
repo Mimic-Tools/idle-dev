@@ -84,9 +84,9 @@ function renderQuests(questlines) {
            const questDiv = document.createElement('div');
            questDiv.className = `quest alert alert-warning`;
            questDiv.innerHTML = `<strong>${quest.title}</strong><br/>${quest.requirements}`;
-           questLine.appendChild(questDiv);
+           questLineDiv.appendChild(questDiv);
         });
-        container.appendChild(questLine);
+        container.appendChild(questLineDiv);
     });
 }
 
