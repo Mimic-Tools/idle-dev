@@ -1,6 +1,6 @@
 [
     {
-        "title": "It's a living (dead)!"
+        "title": "It's a living (dead)!",
         "items": [
             {
                 "title": "Bone Appétit",
@@ -51,14 +51,29 @@
         ]
     },
     {
-        "title": "Mephit to the madness!"
+        "title": "Register for the Guild",
         "items": [
             {
-                "title": "Crystal Mephit",
+                "title": "Submit your character sheet",
                 "criteria": {
-                    "bones": 10
+                    "shots": 10
                 }
-            },
+            },{
+                "title": "Perform the initation ceremony",
+                "criteria": {
+                    "shots": 25
+                }
+            },{
+                "title": "Find your room",
+                "criteria": {
+                    "shots": 50
+                }
+            },{
+                "title": "Meet your guildmates",
+                "criteria": {
+                    "shots": 100
+                }
+            }
         ]
     }
 ]
