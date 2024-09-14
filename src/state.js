@@ -20,7 +20,6 @@ async function loadGame() {
     const savedData = localStorage.getItem('idleGameSave');
     if (savedData) {
         gameData = JSON.parse(savedData);
-        updateDisplay();
         console.log("Game loaded!");
     } else {
         console.log("No save data found.");
