@@ -25,9 +25,9 @@ function renderQuests() {
         questLine["items"].forEach(quest => {
             const questDiv = document.createElement('div');
             if (quest.complete == false || 0){
-                questDiv.className = `quest alert alert-success`;
-            }else{
                 questDiv.className = `quest alert alert-warning`;
+            }else{
+                questDiv.className = `quest alert alert-success`;
             }
             questDiv.innerHTML = `<strong>${quest.title}</strong><br/>`
             Object.entries(quest.criteria).forEach(([what, amount]) => {

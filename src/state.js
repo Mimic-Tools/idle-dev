@@ -2,7 +2,7 @@
 // Function to save game data to localStorage
 function saveGame() {
     localStorage.setItem('idleGameSave', JSON.stringify(gameData));
-    console.log("Game saved!");
+    // console.log("Game saved!");
 }
 
 function clearSave() {
