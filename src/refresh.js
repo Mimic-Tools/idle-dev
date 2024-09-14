@@ -1,6 +1,7 @@
 
 // Function to update the resources display
 function updateDisplay() {
+    // resources 
     list = document.getElementById('resource-list');
     list.innerHTML = "";
 
@@ -9,6 +10,9 @@ function updateDisplay() {
         entry.innerHTML = `${what}: ${amount}`
         list.appendChild(entry);
     });
+
+    // quests
+    checkQuestProgress();
     renderQuests();
 }
 
