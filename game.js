@@ -74,6 +74,27 @@ function getResource(resource_type){
     gameData.resources[resource_type] = prevValue + 1;
     updateDisplay();
 }
+function renderQuests(quests) {
+    const container = document.getElementById('quest-container');
+    container.innerHTML = ''; // Clear container before rendering
+
+    quests.forEach(quest => {
+        const questDiv = document.createElement('div');
+        questDiv.className = `quest alert alert-warning`;
+        questDiv.innerHTML = `<strong>${quest.title}</strong><br/>${quest.description}`;
+        container.appendChild(questDiv);
+    });
+}
+
+// Fetch quests from the JSON file
+fetch('data/quest.json')
+  .then(response => response.json())
+  .then(data => {
+      renderQuests(data);
+   })
+   .catch(error => {
+      console.error('Error fetching the quests:', error);
+   });
 
 document.getElementById('download-save').addEventListener('click', downloadSave);
 document.getElementById('upload-save').addEventListener('click', uploadSave);
