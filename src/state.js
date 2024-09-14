@@ -16,7 +16,7 @@ function clearSave() {
 
 
 // Function to load game data from localStorage
-function loadGame() {
+async function loadGame() {
     const savedData = localStorage.getItem('idleGameSave');
     if (savedData) {
         gameData = JSON.parse(savedData);
@@ -59,9 +59,3 @@ function uploadSave(event) {
 document.getElementById('download-save').addEventListener('click', downloadSave);
 document.getElementById('upload-save').addEventListener('click', uploadSave);
 document.getElementById('clear-save').addEventListener('click', clearSave);
-
-// Load game data on page refresh
-window.onload = loadGame;
-
-// Automatically save game every second
-setInterval(saveGame, 1000);
