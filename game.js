@@ -80,10 +80,12 @@ function renderQuests(questlines) {
 
     questlines.forEach(questLine => {
         const questLineDiv = document.createElement('div');
+        questLineDiv.innerHTML = `<h4>${questLine.title}</h4><hr />`;
+           
         questLine["items"].forEach(quest => {
            const questDiv = document.createElement('div');
            questDiv.className = `quest alert alert-warning`;
-           questDiv.innerHTML = `<strong>${quest.title}</strong><br/>${quest.requirements}`;
+           questDiv.innerHTML = `<strong>${quest.title}</strong><br/>${quest.criteria}`;
            questLineDiv.appendChild(questDiv);
         });
         container.appendChild(questLineDiv);
