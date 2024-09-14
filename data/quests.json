@@ -1,0 +1,53 @@
+[
+    {
+        "title": "It's a living (dead)!"
+        "items": [
+            {
+                "title": "Bone Appétit",
+                "criteria": {
+                    "bones": 10
+                }
+            },{
+                "title": "Bone Idle",
+                "criteria": {
+                    "bones": 25
+                }
+            },{
+                "title": "Bone Idol?",
+                "criteria": {
+                    "bones": 50
+                }
+            },{
+                "title": "Tibia Honest",
+                "criteria": {
+                    "bones": 85
+                }
+            },{
+                "title": "Tomb it may concern",
+                "criteria": {
+                    "bones": 125
+                }
+            },{
+                "title": "A bone to pick-axe",
+                "criteria": {
+                    "bones": 180
+                }
+            },{
+                "title": "Bad to the bone",
+                "criteria": {
+                    "bones": 300
+                }
+            },{
+                "title": "The bone identity",
+                "criteria": {
+                    "bones": 450
+                }
+            },{
+                "title": "Bone Voyage",
+                "criteria": {
+                    "bones": 700
+                }
+            },
+        ]
+    }
+]
