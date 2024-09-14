@@ -2,6 +2,7 @@
 // Function to update the resources display
 function updateDisplay() {
     list = document.getElementById('resource-list');
+    list.innerHTML = "";
 
     Object.entries(gameData.resources).forEach(([what, amount]) => {
         entry = document.createElement('div');
