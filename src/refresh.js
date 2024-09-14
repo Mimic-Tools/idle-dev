@@ -6,7 +6,7 @@ function updateDisplay() {
 
     Object.entries(gameData.resources).forEach(([what, amount]) => {
         entry = document.createElement('div');
-        entry.innerHTML += `${what}: ${amount}`
+        entry.innerHTML = `${what}: ${amount}`
         list.appendChild(entry);
     });
 }
