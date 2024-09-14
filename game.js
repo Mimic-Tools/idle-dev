@@ -79,12 +79,14 @@ function renderQuests(questlines) {
     container.innerHTML = ''; // Clear container before rendering
 
     questlines.forEach(questLine => {
-        questLine.forEach(quest => {
+        const questLineDiv = document.createElement('div');
+        questLine["items"].forEach(quest => {
            const questDiv = document.createElement('div');
            questDiv.className = `quest alert alert-warning`;
            questDiv.innerHTML = `<strong>${quest.title}</strong><br/>${quest.requirements}`;
-           container.appendChild(questDiv);
+           questLine.appendChild(questDiv);
         });
+        container.appendChild(questLine);
     });
 }
 
