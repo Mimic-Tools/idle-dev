@@ -9,6 +9,7 @@ function updateDisplay() {
         entry.innerHTML = `${what}: ${amount}`
         list.appendChild(entry);
     });
+    renderQuests();
 }
 
 
