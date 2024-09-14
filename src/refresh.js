@@ -40,6 +40,10 @@ function renderQuests() {
 }
 
 
+// Initial display update
+updateDisplay();
+
+
 // Fetch quests from the JSON file
 fetch('data/quests.json')
     .then(response => response.json())
@@ -50,10 +54,6 @@ fetch('data/quests.json')
     .catch(error => {
         console.error('Error fetching the quests:', error);
     });
-
-
-// Initial display update
-updateDisplay();
 
 
 // Automatically save game every second
