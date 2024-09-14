@@ -24,7 +24,7 @@ function renderQuests() {
 
         questLine["items"].forEach(quest => {
             const questDiv = document.createElement('div');
-            if (quest.complete == false || 0){
+            if (!quest.complete){
                 questDiv.className = `quest alert alert-warning`;
             }else{
                 questDiv.className = `quest alert alert-success`;
