@@ -10,13 +10,7 @@ function checkQuestProgress(){
     // Iterate over questlines and quests to check if the state needs to change
     window.quest_data.forEach(questline => {
         questline.items.forEach(quest => {
-            if (questFufilled(quest.criteria, gameData.resources)) {
-                quest.complete = true;
-                console.log("questFufilled:", quest);
-            } else {
-                quest.complete = false;
-                console.log("unfufilled:", quest);
-            }
+            quest.complete = questFufilled(quest.criteria, gameData.resources);
         });
     });
 
