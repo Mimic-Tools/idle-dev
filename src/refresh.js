@@ -45,7 +45,6 @@ async function fetchQuests() {
         const response = await fetch('data/quests.json');
         const data = await response.json();
         window.quest_data = data;
-        renderQuests();
     } catch (error) {
         console.error('Error fetching the quests:', error);
     }
@@ -54,8 +53,8 @@ async function fetchQuests() {
 // Execute tasks in sequence using async/await
 async function initGame() {
     await loadGame();         // Ensure game data is loaded first
-    updateDisplay();          // Then update the display
     await fetchQuests();      // After that, fetch and render quests
+    updateDisplay();          // Then update the display
     setInterval(saveGame, 1000);  // Finally, start auto-saving game data every second
 }
 
