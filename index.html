@@ -13,8 +13,22 @@
 <body>
     <h1 style="text-align:center">The Raven's Mark</h1>
 
-    <div class="container text-center">
-      <div class="row">
+    <ul class="nav nav-tabs">
+     <li class="nav-item">
+       <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#world" type="button" role="tab" aria-controls="profile" aria-selected="false">World</button>
+     </li>
+     <li class="nav-item">
+       <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#you" type="button" role="tab" aria-controls="profile" aria-selected="false">You</button>
+        </li>
+     <li class="nav-item">
+       <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="profile" aria-selected="false">Settings</button>
+     </li>
+     
+    </ul>
+    <div class="tab-content" id="myTabContent">
+     <div class="tab-pane fade show active" id="world" role="tabpanel" aria-labelledby="home-tab">
+         
+           <div class="row">
         <div class="col">
           <h2>Resources</h2>
             <p>Bones: <span id="resource-bones">0</span></p>
@@ -23,9 +37,49 @@
             <p>Gold: <span id="resource-gold">0</span></p>
             <p>Fish: <span id="resource-fish">0</span></p>
         </div>
+        
         <div class="col">
-          <h2>Character</h2>
-            <strong>Name: </strong>Bob Boberson<br />
+          <h2>Map</h2>
+          <div>
+               <img width=300 src="corvus.webp" />
+                <div>
+                   <button onclick="getResource('bones')">Graveyard</button>
+                   <button onclick="getResource('pelts')">Outskirts</button>
+                   <button onclick="getResource('gold')">Market</button>
+                   <button onclick="getResource('simps')">The Mark</button>
+                   <button onclick="getResource('fish')">Wharf</button>
+                </div>
+          </div>
+        </div>
+        <div class="col">
+          <h2>Quest (Doesn't work)</h2>
+            
+           <div id="quest-container" style="overflow-y:scroll;height:400px;">
+               <!--
+               <div class="quest alert alert-warning">
+                   <strong>Bone Digger</strong><br/>Gather 10 Bones at the Graveyard
+               </div>
+               <div class="quest alert alert-warning">
+                   <strong>Submit your character sheet</strong><br/>Register for the Guild
+               </div>
+               <div class="quest alert alert-warning">
+                   <strong>Hot Topic</strong><br/>Kill 8 million fire mephits
+               </div>
+               <div class="quest alert alert-warning">
+                   <strong>Gap Year</strong><br/>Travel to a new region
+               </div>
+               <div class="quest alert alert-danger">
+                   <strong>Failed!</strong><br/> Enter the Ultra-BFF contest
+               </div>
+               -->
+           </div>
+        </div>
+      </div>
+     </div>
+     </div>
+    <div class="tab-pane fade" id="you" role="tabpanel" aria-labelledby="profile-tab">
+        <h2>Character</h2>
+            <strong>Name: </strong>Norm Alman<br />
             <strong>Race: </strong>Elf<br />
             <strong>Class: </strong>Commoner<br />
             <strong>Rank: </strong>Hatchling<br />
@@ -51,50 +105,21 @@
                 </tr>
             </tbody>
             </table>
-        </div>
-        <div class="col">
-          <h2>Map</h2>
-          <div>
-               <img width=300 src="corvus.webp" />
-                <div>
-                   <button onclick="getResource('bones')">Graveyard</button>
-                   <button onclick="getResource('pelts')">Outskirts</button>
-                   <button onclick="getResource('gold')">Market</button>
-                   <button onclick="getResource('simps')">The Mark</button>
-                   <button onclick="getResource('fish')">Wharf</button>
-                </div>
-          </div>
-        </div>
-        <div class="col">
-          <h2>Quest (Doesn't work)</h2>
-           <div id="quest-container" style="overflow-y:scroll;height:400px;">
-               <div class="quest alert alert-warning">
-                   <strong>Bone Digger</strong><br/>Gather 10 Bones at the Graveyard
-               </div>
-               <div class="quest alert alert-warning">
-                   <strong>Submit your character sheet</strong><br/>Register for the Guild
-               </div>
-               <div class="quest alert alert-warning">
-                   <strong>Hot Topic</strong><br/>Kill 8 million fire mephits
-               </div>
-               <div class="quest alert alert-warning">
-                   <strong>Gap Year</strong><br/>Travel to a new region
-               </div>
-               <div class="quest alert alert-danger">
-                   <strong>Failed!</strong><br/> Enter the Ultra-BFF contest
-               </div>
-           </div>
-        </div>
-      </div>
     </div>
-    
-    <p />
-    <div>
+     <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="profile-tab">
+
+<div>
         <button id="download-save">Download Save</button>
         <input type="file" id="upload-save" accept=".json">
         <button id="clear-save">Reset Game</button>
         
-    </div>
+</div>
+         
+     </div>
+     </div>
+
+
+    
     <script src="game.js"></script>
 </body>
 </html>
