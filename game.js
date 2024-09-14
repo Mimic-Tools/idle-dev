@@ -89,7 +89,7 @@ function renderQuests(questlines) {
 }
 
 // Fetch quests from the JSON file
-fetch('data/quest.json')
+fetch('data/quests.json')
   .then(response => response.json())
   .then(data => {
       renderQuests(data);
