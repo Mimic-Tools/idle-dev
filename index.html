@@ -21,6 +21,10 @@
                 role="tab" aria-controls="profile" aria-selected="false">World</button>
         </li>
         <li class="nav-item">
+            <button class="nav-link" id="quests-tab" data-bs-toggle="tab" data-bs-target="#you" type="button"
+                role="tab" aria-controls="profile" aria-selected="false">Quests</button>
+        </li>
+        <li class="nav-item">
             <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#you" type="button"
                 role="tab" aria-controls="profile" aria-selected="false">You</button>
         </li>
@@ -37,6 +41,7 @@
                 <div class="col">
                     <h2>Resources</h2>
                     <div id="resource-list"></div>
+                    <div><button>Ability Score Improvement</button></div>
                 </div>
 
                 <div class="col">
@@ -52,13 +57,41 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="col">
-                    <h2>Quests</h2>
+                    <div><strong>Jo's little helper</strong>Cost: 10 Shots. Gain: + 1 Shots / sec. </div>
+                    <div><strong>Fisherman's Friend</strong>Cost: 10 Fish. Gain: + 1 Fish / sec. </div>
+                    <div><strong>Recurring Contract</strong>Cost: 10 Pelts. Gain: + 1 Pelts / sec. </div>
+                    <div><strong>Business Investment</strong>Cost: 10 Coins. Gain: + 1 Coins / sec.</div>
+                    <div><strong>Shady Deal with a Necromancer</strong>Cost: 10 Bones. Gain: + 1 Bones / sec. + Evil</div>
 
-                    <div id="quest-container" style="overflow-y:scroll;height:400px;">
+                </div>
+            </div>
+
+            <div class="row">
+                <h2>Story</h2>
+                <div id="story-container">
+                    <div class="story-item">
+                        A beam of sunlight reflects off of a dirty window pane and shines right in your eye, stirring you from your slumber. Your head feels heavy, as if rousing from an eternal sleep. Muffled sounds of life - voices, the pats of feet on cobblestones - start to be coherently audible amongst a general hubbub of the town. Rising to your feet, you find yourself in an alleyway with little to your person aside from a set of rags that barely cover your person. You try to remember how you got here, where exactly this was, but come up blank. As you emerge from the dark sidestreet, the town sprawls out before you. Without a penny to your name, you walk out, to at least explore your surroundings...
+                    </div>
+                    <div class="story-item">
+                        <b>Enters Tavern</b>
+                        As you enter the tavern and glance over the facilities, something catches your eye and sparks a very important thought in your mind. Something you have no idea how you forgot, but still need to discover. You step into the toilets and in the privacy of a cubicle look inside your trousers. Once you see it, the memory comes flooding back. Of course you had: <button>Boy Bits</button>, <button>Girl Bits</button>, <button>A tentacle</button>, <button>A pixelated area</button>
+                    </div>
+                    <div class="story-item">
+                        <b>Enters Graveyard</b>
+                        Meet Calos
                     </div>
                 </div>
             </div>
+            
+        </div>
+    </div>
+    <div class="tab-pane fade" id="quests" role="tabpanel" aria-labelledby="quests-tab">
+        
+        <h2>Quests</h2>
+
+        <div id="quest-container" style="overflow-y:scroll;height:400px;">
         </div>
     </div>
     <div class="tab-pane fade" id="you" role="tabpanel" aria-labelledby="profile-tab">
@@ -97,11 +130,7 @@
             <div class="col">
                 <h4>Upgrades</h4>
                 <div>
-                    <div><strong>Jo's little helper</strong>Cost: 10 Shots. Gain: + 1 Shots / sec. </div>
-                    <div><strong>Fisherman's Friend</strong>Cost: 10 Fish. Gain: + 1 Fish / sec. </div>
-                    <div><strong>Recurring Contract</strong>Cost: 10 Pelts. Gain: + 1 Pelts / sec. </div>
-                    <div><strong>Business Investment</strong>Cost: 10 Coins. Gain: + 1 Coins / sec.</div>
-                    <div><strong>Shady Deal with a Necromancer</strong>Cost: 10 Bones. Gain: + 1 Bones / sec. + Evil</div>
+                    <div><button>Ability Score Improvement</button></div>
                 </div>
             </div>
         </div>
