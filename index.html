@@ -41,38 +41,36 @@
 
                     <div class="row">
                         <div class="col">
-                            <h2>Resources</h2>
-                            <div id="resource-list"></div>
-                            <div><button>Ability Score Improvement</button></div>
+                            <div class="card">
+                              <h5 class="card-header">Resources</h5>
+                              <div id="resource-list" class="card-body">
+                              </div>
+                            </div>
+<!--                             <div><button>Ability Score Improvement</button></div> -->
                         </div>
 
                         <div class="col">
-                            <h2>Map</h2>
-                            <div>
-                                <img width=300 src="corvus.webp" />
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-header">
+                                    Gharmid > Avia > Corvus
+                                </div>
+                                <img width=300 src="corvus.webp" class="card-img-top" alt="Corvus Map" />
+<!--                                 <div class="card-body"> -->
+<!--                                 <p class="card-text">Gharmid > Avia > Corvus</p> -->
+<!--                                 </div> -->
                                 <div>
-                                    <button style="position: relative;top: -80px;  left: 60px;"
-                                        onclick="getResource('bones')">Graveyard</button>
-                                    <button style="position: relative;top: -280px; left: 120px;"
-                                        onclick="getResource('pelts')">Outskirts</button>
-                                    <button style="position: relative;top: -110px;  left: -50px;"
-                                        onclick="getResource('gold')">Market</button>
-                                    <button style="position: relative;top: -220px;  left: 120px;"
-                                        onclick="getResource('shots')">The Mark</button>
-                                    <button style="position: relative;top: -250px;  left: -80px;"
-                                        onclick="getResource('fish')">Wharf</button>
+                                    <a href="#" class="btn btn-primary" style="position: relative;top: -80px;  left: 60px;"
+                                        onclick="getResource('bones')">Graveyard</a>
+                                    <a href="#" class="btn btn-primary" style="position: relative;top: -280px; left: 120px;"
+                                        onclick="getResource('pelts')">Outskirts</a>
+                                    <a href="#" class="btn btn-primary" style="position: relative;top: -110px;  left: -50px;"
+                                        onclick="getResource('gold')">Market</a>
+                                    <a href="#" class="btn btn-primary" style="position: relative;top: -220px;  left: 120px;"
+                                        onclick="getResource('shots')">The Mark</a>
+                                    <a href="#" class="btn btn-primary" style="position: relative;top: -250px;  left: -80px;"
+                                        onclick="getResource('fish')">Wharf</a>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col">
-                            <div><strong>Jo's little helper</strong>Cost: 10 Shots. Gain: + 1 Shots / sec. </div>
-                            <div><strong>Fisherman's Friend</strong>Cost: 10 Fish. Gain: + 1 Fish / sec. </div>
-                            <div><strong>Recurring Contract</strong>Cost: 10 Pelts. Gain: + 1 Pelts / sec. </div>
-                            <div><strong>Business Investment</strong>Cost: 10 Coins. Gain: + 1 Coins / sec.</div>
-                            <div><strong>Shady Deal with a Necromancer</strong>Cost: 10 Bones. Gain: + 1 Bones / sec. +
-                                Evil</div>
-
                         </div>
                     </div>
 
